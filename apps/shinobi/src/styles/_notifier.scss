@@ -1,0 +1,37 @@
+@keyframes slideInUp {
+  from {
+    opacity: 0.01;
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, +100%, 0);
+    opacity: 0.01;
+  }
+}
+
+.notifier-enter {
+}
+
+.notifier-enter.notifier-enter-active {
+  animation: slideInUp 1s forwards;
+}
+
+.notifier-leave {
+}
+
+.notifier-leave.notifier-leave-active {
+  animation: slideInOut 1s forwards;
+}

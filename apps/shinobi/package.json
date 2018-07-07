@@ -1,0 +1,47 @@
+{
+  "name": "shinobi",
+  "version": "1.0.0",
+  "description": "Snippetsniper web interface",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production node tools/build.js",
+    "deploy": "gh-pages -d build",
+    "dev": "cross-env NODE_ENV=development node tools/dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajatsharma305/shinobi"
+  },
+  "author": "Rajat Sharma",
+  "license": "MIT",
+  "dependencies": {
+    "@elementary/components": "^0.2.2-alpha-4",
+    "@lectro/enhancer-commonutils": "1.1.2-alpha-13",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "gh-pages": "^1.0.0",
+    "object-assign": "^4.1.1",
+    "promise": "^7.1.1",
+    "prop-types": "^15.5.10",
+    "ramda": "^0.24.1",
+    "react": "16.4.0",
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-dom": "16.4.0",
+    "react-redux": "^5.0.4",
+    "react-router": "^3.0.0",
+    "redbox-react": "^1.3.6",
+    "redux": "^3.6.0",
+    "redux-saga": "^0.15.4",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^2.1.1",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "@lectro/core": "1.1.2-alpha-16",
+    "autoprefixer": "7.1.6",
+    "const": "1.0.0",
+    "cross-env": "^5.0.0",
+    "fs-extra": "^3.0.1",
+    "webpackbar": "2.6.1"
+  }
+}
