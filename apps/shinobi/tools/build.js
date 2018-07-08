@@ -1,10 +1,10 @@
-const lectro = require('./lectro')
-const fs = require('fs-extra')
-const path = require('path')
+const lectro = require('./lectro');
+const fs = require('fs-extra');
+const path = require('path');
 
 fs.copySync(
   path.resolve(process.cwd(), 'public'),
-  path.resolve(process.cwd(), 'build')
-)
+  path.resolve(process.cwd(), 'build'),
+);
 
-lectro.build()
+lectro.build();

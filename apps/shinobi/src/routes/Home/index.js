@@ -1,5 +1,6 @@
 import { injectReducer } from '../../store/reducers';
 import { injectSagas } from '../../store/sagas';
+import actionspreader from '../../utils/actionspreader';
 
 export default store => ({
   path: 'home',
@@ -18,6 +19,7 @@ export default store => ({
         /*  Add the reducer to the store on key 'counter'  */
         injectReducer(store, { key: 'home', reducer });
         injectSagas(store, sagas);
+        store.dispatch(actionspreader('GETRECENT'));
         /*  Return getComponent   */
         cb(null, Container);
 

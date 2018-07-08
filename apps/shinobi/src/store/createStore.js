@@ -1,15 +1,15 @@
 import {
   applyMiddleware,
   compose,
-  createStore as createReduxStore
-} from "redux";
-import thunk from "redux-thunk";
-import { hashHistory } from "react-router";
-import createSagaMiddleware from "redux-saga";
+  createStore as createReduxStore,
+} from 'redux';
+import thunk from 'redux-thunk';
+import { hashHistory } from 'react-router';
+import createSagaMiddleware from 'redux-saga';
 
-import makeRootReducer from "./reducers";
-import { updateLocation } from "./location";
-import coreSaga from "../core/sagas";
+import makeRootReducer from './reducers';
+import { updateLocation } from './location';
+import coreSaga from '../core/sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 const createStore = (initialState = {}) => {
@@ -25,7 +25,7 @@ const createStore = (initialState = {}) => {
   let composeEnhancers = compose;
 
   if (__DEV__) {
-    if (typeof window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ === "function") {
+    if (typeof window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ === 'function') {
       composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
     }
   }
@@ -36,7 +36,7 @@ const createStore = (initialState = {}) => {
   const store = createReduxStore(
     makeRootReducer(),
     initialState,
-    composeEnhancers(applyMiddleware(...middleware), ...enhancers)
+    composeEnhancers(applyMiddleware(...middleware), ...enhancers),
   );
 
   sagaMiddleware.run(coreSaga);
@@ -46,8 +46,8 @@ const createStore = (initialState = {}) => {
   store.unsubscribeHistory = hashHistory.listen(updateLocation(store));
 
   if (module.hot) {
-    module.hot.accept("./reducers", () => {
-      const reducers = require("./reducers").default;
+    module.hot.accept('./reducers', () => {
+      const reducers = require('./reducers').default;
       store.replaceReducer(reducers(store.asyncReducers));
     });
   }

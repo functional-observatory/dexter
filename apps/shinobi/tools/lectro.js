@@ -1,16 +1,11 @@
 const Lectro = require('@lectro/core');
 const CommonUtilsEnhancer = require('@lectro/enhancer-commonutils');
-const WebpackBar = require('webpackbar');
+const BuildUtilsEnhancer = require('@lectro/enhancer-buildutils');
 
-class ShinobiLectro extends Lectro {
-  addWebpackBar() {
-    return this.mutate(self =>
-      self.webpackConfig.plugins.push(new WebpackBar({ name: 'Shinobi' })),
-    );
-  }
-}
+const Shinobi = new Lectro('web' /* Target */);
 
-const lectro = new ShinobiLectro('web' /* Target */)
-  .addWebpackBar()
+Shinobi.use(BuildUtilsEnhancer)
+  .addProgressBar({ name: "Rajat's Pokedex", color: 'blue' })
+  .devtool('source-map')
   .use(CommonUtilsEnhancer);
-module.exports = lectro;
+module.exports = Shinobi;

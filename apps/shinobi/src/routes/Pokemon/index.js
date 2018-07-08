@@ -17,7 +17,7 @@ export default store => ({
         const reducer = require('./reducer').default;
         const sagas = require('./sagas').default;
         /*  Add the reducer to the store on key 'counter'  */
-        injectReducer(store, { key: 'home', reducer });
+        injectReducer(store, { key: 'pokemon', reducer });
         injectSagas(store, sagas);
         store.dispatch(actionspreader('GETPOKEMON'));
         /*  Return getComponent   */

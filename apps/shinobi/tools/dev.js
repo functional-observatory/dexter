@@ -1,3 +1,3 @@
-const lectro = require('./lectro')
+const lectro = require('./lectro');
 
-lectro.dev()
+lectro.dev();

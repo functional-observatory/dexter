@@ -1,4 +1,4 @@
-import reducer from "../../futils/reducer";
+import reducer from '../../futils/reducer';
 
 // ------------------------------------
 // Constants
@@ -7,11 +7,16 @@ import reducer from "../../futils/reducer";
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
-const ACTION_HANDLERS = {};
+const ACTION_HANDLERS = {
+  GOTRECENTPOKEMON: (s, a) => ({ ...s, recents: a.payload }),
+  CHANGESEARCHTEXT: (s, a) => ({ ...s, searchText: a.payload }),
+};
 
 // ------------------------------------
 // Reducer
 // ------------------------------------
-const initialState = {};
+const initialState = {
+  recents: [],
+};
 
 export default reducer(initialState, ACTION_HANDLERS);

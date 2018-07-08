@@ -1,12 +1,12 @@
-import { connect } from "react-redux";
-import actionSpreader from "../../utils/actionspreader"; // eslint-disable-line
+import { connect } from 'react-redux';
+import actionSpreader from '../../utils/actionspreader'; // eslint-disable-line
 
 /*  This is a container component. Notice it does not contain any JSX,
     nor does it import React. This component is **only** responsible for
     wiring in the actions and state necessary to render a presentational
     component - in this case, the counter:   */
 
-import MainComponent from "./main";
+import MainComponent from './main';
 
 /*  Object of action creators (can also be function that returns object).
     Keys will be passed as props to presentational components. Here we are
@@ -14,10 +14,12 @@ import MainComponent from "./main";
 
 const mapDispatchToProps = dispatch => ({
   showNotifier: () =>
-    dispatch(actionSpreader("SHOWTOAST", { content: "Hello this is Shinobi" }))
+    dispatch(actionSpreader('SHOWTOAST', { content: 'Hello this is Shinobi' })),
 });
 
-const mapStateToProps = () => ({});
+const mapStateToProps = state => ({
+  pokemon: state.pokemon.pokemon,
+});
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
 
@@ -35,5 +37,5 @@ const mapStateToProps = () => ({});
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(MainComponent);

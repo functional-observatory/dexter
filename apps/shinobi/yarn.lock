@@ -698,6 +698,12 @@
     webpack-hot-middleware "^2.22.1"
     webpack-node-externals "^1.6.0"
 
+"@lectro/enhancer-buildutils@^0.1.0-alpha-7":
+  version "0.1.0-alpha-7"
+  resolved "https://registry.npmjs.org/@lectro/enhancer-buildutils/-/enhancer-buildutils-0.1.0-alpha-7.tgz#42edc4ec2c3985e9c6c6322b937cba075d3ff123"
+  dependencies:
+    webpackbar "^2.6.1"
+
 "@lectro/enhancer-commonutils@1.1.2-alpha-13":
   version "1.1.2-alpha-13"
   resolved "https://registry.npmjs.org/@lectro/enhancer-commonutils/-/enhancer-commonutils-1.1.2-alpha-13.tgz#8b562e9cdeeb02ce767ec06e62af843a771bb234"
@@ -6463,9 +6469,9 @@ webpack@4.9.0:
     watchpack "^1.5.0"
     webpack-sources "^1.0.1"
 
-webpackbar@2.6.1:
+webpackbar@2.6.1, webpackbar@^2.6.1:
   version "2.6.1"
-  resolved "https://registry.yarnpkg.com/webpackbar/-/webpackbar-2.6.1.tgz#d1aff0665c43635ff35672be2f2463d1176bdb6f"
+  resolved "https://registry.npmjs.org/webpackbar/-/webpackbar-2.6.1.tgz#d1aff0665c43635ff35672be2f2463d1176bdb6f"
   dependencies:
     chalk "^2.3.2"
     consola "^1.2.0"

@@ -3,6 +3,7 @@
   "parser": "babel-eslint",
   "plugins": ["prettier", "import"],
   "rules": {
+    "react/forbid-prop-types": 0,
     "prettier/prettier": "error",
     "func-names": ["error", "never"],
     "no-param-reassign": 0,
@@ -12,5 +13,8 @@
     "no-console": 0,
     "global-require": 0,
     "react/jsx-filename-extension": 0
+  },
+  "globals": {
+    "window": true
   }
 }
