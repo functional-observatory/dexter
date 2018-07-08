@@ -1,17 +1,18 @@
 // We only need to import the modules necessary for initial render
-import CoreLayout from "../core/layout";
-import Home from "./Home";
+import CoreLayout from '../core/layout';
+import Home from './Home';
+import Pokemon from './Pokemon';
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
 
 export const createRoutes = store => ({
-  path: "/",
+  path: '/',
   component: CoreLayout,
   indexRoute: {
-    onEnter: (nextState, replace) => replace("home")
+    onEnter: (nextState, replace) => replace('home'),
   },
-  childRoutes: [Home(store)]
+  childRoutes: [Home(store), Pokemon(store)],
 });
 
 /*  Note: childRoutes can be chunked or otherwise loaded programmatically
