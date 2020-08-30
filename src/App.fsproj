@@ -3,6 +3,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="components/TypeGradient.fs" />
     <Compile Include="components/Style.fs" />
     <Compile Include="components/Text.fs" />
     <Compile Include="components/Grid.fs" />

@@ -2,7 +2,7 @@ module Components.Style
 
 open Feliz
 
-let style' =
+let styles' =
   React.functionComponent
     ("Style",
      (fun _ ->
@@ -18,4 +18,4 @@ let style' =
        }
   """))
 
-let style = style' ()
+let styles = styles' ()

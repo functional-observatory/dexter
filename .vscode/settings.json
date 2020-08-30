@@ -1,0 +1,6 @@
+{
+  "[fsharp]": {
+    "editor.useTabStops": false,
+    "editor.formatOnSave": true
+  }
+}

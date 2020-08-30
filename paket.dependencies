@@ -9,3 +9,4 @@ nuget Fable.Elmish.React
 nuget Feliz
 nuget Zanaptak.TypedCssClasses
 nuget Fable.SimpleHttp
+nuget Fable.JsonProvider

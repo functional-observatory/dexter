@@ -10,7 +10,7 @@ let text' =
   React.functionComponent
     ("Text",
      (fun (props: TextProps) ->
-       Html.div [ prop.style [ style.display.flex
+       Html.div [ prop.style [ style.textTransform.capitalize
                                if props.Style.Length > 0 then yield! props.Style ]
                   prop.text props.Text ]))
 

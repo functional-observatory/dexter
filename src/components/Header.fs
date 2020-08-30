@@ -2,7 +2,7 @@ module Components.Header
 
 open Feliz
 
-type HeaderProps = { Title: string Option }
+type HeaderProps = { Title: string }
 
 let header' =
   React.functionComponent
@@ -14,6 +14,6 @@ let header' =
                                style.alignItems.center
                                style.justifyContent.center
                                style.backgroundImage "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" ]
-                  prop.children [ Html.h1 (Option.defaultValue "Doppler" props.Title) ] ]))
+                  prop.children [ Html.h1  props.Title ] ]))
 
 let header title = header' { Title = title }
