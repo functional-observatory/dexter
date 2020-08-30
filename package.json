@@ -1,14 +1,13 @@
 {
+  "name": "doppler",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
   "devDependencies": {
-    "babel-eslint": "^8.1.2",
-    "eslint": "4.18.2",
-    "eslint-config-airbnb": "16.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.1.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-react": "^7.10.0",
-    "lerna": "^2.5.1",
-    "prettier": "^1.13.2"
+    "engine-phi": "^0.1.4-3"
+  },
+  "scripts": {
+    "dev": "phi dev",
+    "build": "phi build"
   }
 }

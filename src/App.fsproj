@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="components/Style.fs" />
+    <Compile Include="components/Text.fs" />
+    <Compile Include="components/Grid.fs" />
+    <Compile Include="components/Flex.fs" />
+    <Compile Include="components/Card.fs" />
+    <Compile Include="components/Header.fs" />
+    <Compile Include="App.fs" />
+    <Compile Include="Main.fs" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>
