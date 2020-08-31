@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "engine-phi": "^0.1.4-3"
+    "engine-phi": "^0.1.4-3",
+    "netlify-cli": "^2.59.2"
   },
   "scripts": {
+    "deploy": "netlify deploy --dir=build",
     "dev": "phi dev",
     "build": "phi build"
   }
