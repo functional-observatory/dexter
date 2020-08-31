@@ -89,16 +89,17 @@ let render (state: State) (dispatch: Msg -> unit) =
                style.fontFamily "'Roboto', sans-serif"
                style.justifyContent.spaceAround ] [
         Html.input [ prop.style searchInput
-                     prop.spellcheck false
+                     prop.custom ("spellCheck", false)
                      prop.autoFocus true
                      prop.className "searchInput"
                      prop.type'.text
                      prop.value state.SearchText
                      prop.onChange (GetData >> dispatch) ]
-        text
-          [ style.fontSize 24
-            style.textTransform.none
-            style.width (length.percent 70) ]
-          "Pokedex made with 💖 and Strong Types by Rajat Sharma"
+        Html.a [ prop.style [ style.fontSize 24
+                              style.textDecoration.none
+                              style.color "#fbfbfc"
+                              style.width (length.percent 70) ]
+                 prop.text "View Source"
+                 prop.href "https://github.com/rajatsharma/doppler" ]
       ]
       renderData state.ResponseText ]
