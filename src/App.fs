@@ -100,6 +100,6 @@ let render (state: State) (dispatch: Msg -> unit) =
                               style.color "#fbfbfc"
                               style.width (length.percent 70) ]
                  prop.text "View Source 👨‍💻"
-                 prop.href "https://github.com/rajatsharma/doppler" ]
+                 prop.href "https://github.com/rajatsharma/dexter" ]
       ]
       renderData state.ResponseText ]

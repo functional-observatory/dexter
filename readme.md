@@ -1,6 +1,6 @@
 <h1 align="center">Dexter</h1>
 <h5 align="center">Pokemon search made with F# and Elmish</h5>
-<a href="https://github.com/rajatsharma/doppler"><img src="demo.png" alt="doppler-demo"></a>
+<a href="https://github.com/rajatsharma/dexter"><img src="demo.png" alt="dexter-demo"></a>
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@
 - Clone the repo.
 
 ```sh
-git clone https://github.com/rajatsharma/doppler
+git clone https://github.com/rajatsharma/dexter
 ```
 
 - Install dependencies.
