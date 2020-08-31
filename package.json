@@ -1,5 +1,6 @@
 {
   "name": "doppler",
+  "private": true,
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,8 +9,9 @@
     "netlify-cli": "^2.59.2"
   },
   "scripts": {
-    "deploy": "netlify deploy --dir=build",
     "dev": "phi dev",
-    "build": "phi build"
+    "build": "phi build",
+    "deploy": "netlify deploy --dir=build --prod",
+    "deploy:dry": "netlify deploy --dir=build"
   }
 }
