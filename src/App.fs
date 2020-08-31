@@ -99,7 +99,7 @@ let render (state: State) (dispatch: Msg -> unit) =
                               style.textDecoration.none
                               style.color "#fbfbfc"
                               style.width (length.percent 70) ]
-                 prop.text "View Source"
+                 prop.text "View Source 👨‍💻"
                  prop.href "https://github.com/rajatsharma/doppler" ]
       ]
       renderData state.ResponseText ]
