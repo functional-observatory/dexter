@@ -14,6 +14,7 @@ let cardLayout pokemonType =
     style.borderRadius 15
     style.margin 10
     style.height 450
+    style.custom ("placeSelf", "center")
     style.padding 15
     style.backgroundImage (getGradient pokemonType)
     style.alignItems.center ]
@@ -52,16 +53,10 @@ let stat =
     style.fontSize 12
     style.fontStyle.italic ]
 
-let abilitiesGrid =
-  [ style.marginTop 10
-    style.custom ("place-content", "center")
-    style.custom ("column-gap", "10px")
-    style.custom ("grid-template-columns", "1fr 1fr") ]
-
 let movesGrid =
   [ style.marginTop 10
-    style.custom ("column-gap", "10px")
-    style.custom ("grid-template-rows", "1fr 1fr") ]
+    style.custom ("columnGap", "10px")
+    style.custom ("gridTemplateRows", "1fr 1fr") ]
 
 type CardProps = { Pokemon: string }
 

@@ -16,6 +16,10 @@ let styles' =
        .cardHero {
           object-fit: scale-down;
        }
+
+       : focus {
+          outline: none;
+       }
   """))
 
 let styles = styles' ()
