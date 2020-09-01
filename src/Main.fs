@@ -6,6 +6,6 @@ open Elmish.Debug
 open Elmish.HMR
 
 // App
-Program.mkProgram App.init App.update App.render
+Program.mkProgram MessageBroker.init MessageBroker.update App.render
 |> Program.withReactSynchronous "app"
 |> Program.run

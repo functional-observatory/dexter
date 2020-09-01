@@ -3,13 +3,18 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="components/TypeGradient.fs" />
+    <Compile Include="Operators.fs" />
+    <Compile Include="apputils/Shades.fs" />
+    <Compile Include="apputils/PokemonColor.fs" />
     <Compile Include="components/Style.fs" />
     <Compile Include="components/Text.fs" />
     <Compile Include="components/Grid.fs" />
     <Compile Include="components/Flex.fs" />
+    <Compile Include="components/Link.fs" />
+    <Compile Include="types/Api.fs" />
+    <Compile Include="components/Search.fs" />
     <Compile Include="components/Card.fs" />
-    <Compile Include="components/Header.fs" />
+    <Compile Include="MessageBroker.fs" />
     <Compile Include="App.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>

@@ -1,21 +1,23 @@
 module Components.Style
 
 open Feliz
+open Operators
+open AppUtils.Shades
 
 let styles' =
-  React.functionComponent
-    ("Style",
-     (fun _ ->
-       Html.style """
+  "Style"
+  => fun _ ->
+    Html.style
+      (sprintf """
        body {
           font-family: 'Raleway', sans-serif;
-          background: #060713;
-          color: #fbfbfc;
+          background: %s;
+          color: %s;
        }
 
        .cardHero {
           object-fit: scale-down;
        }
-  """))
+  """   dark light)
 
 let styles = styles' ()

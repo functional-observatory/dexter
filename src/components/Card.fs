@@ -1,13 +1,13 @@
 module Components.Card
 
 open Feliz
+open Operators
+open AppUtils.PokemonColor
+open AppUtils.Shades
 open Components.Flex
 open Components.Grid
 open Components.Text
-open Components.Typegradient
-open Fable.JsonProvider
-
-type P = Generator<"https://pokeapi.co/api/v2/pokemon/151">
+open Types.Api
 
 let cardLayout pokemonType =
   [ style.width 300
@@ -16,7 +16,8 @@ let cardLayout pokemonType =
     style.height 450
     style.custom ("placeSelf", "center")
     style.padding 15
-    style.backgroundImage (getGradient pokemonType)
+    style.backgroundImage
+    <| getPokemonColor pokemonType
     style.alignItems.center ]
 
 let cardHero =
@@ -29,28 +30,22 @@ let cardHero =
 
 let cardDesc =
   [ style.marginTop 10
-    style.color "#060713"
+    style.color dark
     style.zIndex 1
     style.backgroundColor "rgba(255, 255, 255, 0.7)"
     style.width (length.percent 100)
     style.height (length.percent 100) ]
 
 let cardTitle =
-  [ style.color "#060713"
+  [ style.color dark
     style.textTransform.capitalize
     style.fontSize 20
     style.fontWeight.bolder ]
 
 let subTitle =
-  [ style.color "#060713"
+  [ style.color dark
     style.textTransform.capitalize
     style.fontWeight.bolder
-    style.fontStyle.italic ]
-
-let stat =
-  [ style.color "#060713"
-    style.textTransform.capitalize
-    style.fontSize 12
     style.fontStyle.italic ]
 
 let movesGrid =
@@ -60,15 +55,27 @@ let movesGrid =
 
 type CardProps = { Pokemon: string }
 
-let card' =
-  React.functionComponent
-    ("Card",
-     (fun (props: CardProps) ->
+let ``Pokemon Card`` =
+  "Card"
+  => fun (props: CardProps) ->
+       let pokemon = Pokemon props.Pokemon
+
+       let pokemonType = (Array.head pokemon.types).``type``.name
+
+       let pokemonImage =
+         pokemon.sprites.other.``official-artwork``.front_default
+
+       let pokemonMoves =
+         Array.map (fun (elem: Pokemon.Moves) -> text [] elem.move.name) (Array.take 3 pokemon.moves)
+
+       let pokemonAbilities =
+         Array.map (fun (elem: Pokemon.Abilities) -> text [] elem.ability.name) pokemon.abilities
+
        column
-         (cardLayout (Array.head (P props.Pokemon).types).``type``.name)
+         (cardLayout pokemonType)
          [ row
              cardHero
-             [ Html.img [ prop.src (P props.Pokemon).sprites.other.``official-artwork``.front_default
+             [ Html.img [ prop.src pokemonImage
                           prop.style [ style.position.absolute ]
                           prop.className "cardHero"
                           prop.width 300
@@ -76,21 +83,16 @@ let card' =
            column
              cardDesc
              [ column [ style.alignItems.center ] [
-                 text cardTitle (P props.Pokemon).name
-                 text subTitle (sprintf "%s Pokemon" (P props.Pokemon).types.[0].``type``.name)
+                 text cardTitle pokemon.name
+                 text subTitle (sprintf "%s Pokemon" pokemonType)
                ]
                column [ style.padding 10 ] [
                  text [ style.fontWeight.bolder ] "Moves"
-                 grid
-                   movesGrid
-                   [ yield! Array.map (fun (elem: P.Moves) -> text [] elem.move.name)
-                              (Array.take 3 (P props.Pokemon).moves) ]
+                 grid movesGrid [ yield! pokemonMoves ]
                ]
                column [ style.padding 10 ] [
                  text [ style.fontWeight.bolder ] "Abilities"
-                 grid
-                   movesGrid
-                   [ yield! Array.map (fun (elem: P.Abilities) -> text [] elem.ability.name) (P props.Pokemon).abilities ]
-               ] ] ]))
+                 grid movesGrid [ yield! pokemonAbilities ]
+               ] ] ]
 
-let card (pokemon: string) = card' ({ Pokemon = pokemon })
+let card (pokemon: string) = ``Pokemon Card`` ({ Pokemon = pokemon })

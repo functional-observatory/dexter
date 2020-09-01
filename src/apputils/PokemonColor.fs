@@ -1,6 +1,6 @@
-module Components.Typegradient
+module AppUtils.PokemonColor
 
-let getGradient pokemonType =
+let rec getPokemonColor pokemonType =
   match pokemonType with
   | "bug" -> "linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)"
   | "dark" -> "linear-gradient(to top, #30cfd0 0%, #330867 100%)"
@@ -21,4 +21,5 @@ let getGradient pokemonType =
   | "steel" ->
       "linear-gradient(-180deg, #bcc5ce 0%, #929ead 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%)"
   | "water" -> "linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%)"
-  | _ -> "linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%)"
+  // If no above type found return colors of normal type
+  | _ -> getPokemonColor "normal"
