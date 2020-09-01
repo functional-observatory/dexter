@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "engine-phi": "^0.1.4-3",
+    "engine-phi": "^0.1.4-4",
     "netlify-cli": "^2.59.2"
   },
   "scripts": {

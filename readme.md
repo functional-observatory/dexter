@@ -53,4 +53,4 @@ yarn deploy
 yarn deploy:dry
 ```
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a5f928bb-b883-4d2a-9aae-125c67fbc967/deploy-status)](https://app.netlify.com/sites/doppler/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9c9cdce5-9faa-40ea-82b6-a184c6c60ca0/deploy-status)](https://dex-fs.netlify.app)
