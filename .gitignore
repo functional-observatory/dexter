@@ -17,3 +17,6 @@ paket-files/
 # Dotnet Assemblies
 obj/
 bin/
+
+# Html file
+src/index.html

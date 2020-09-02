@@ -10,3 +10,5 @@ nuget Feliz
 nuget Zanaptak.TypedCssClasses
 nuget Fable.SimpleHttp
 nuget Fable.JsonProvider
+nuget Feliz.ViewEngine
+nuget Fake.Core.Process
