@@ -1,4 +1,4 @@
 module AppUtils.Shades
 
-let dark = "#060713"
+let dark = "#181b1d"
 let light = "#fbfbfc"

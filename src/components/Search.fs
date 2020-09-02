@@ -7,7 +7,7 @@ open AppUtils.Shades
 let searchInputStyle =
   [ style.fontSize 90
     style.width (length.percent 70)
-    style.color light
+    style.color "currentColor"
     style.custom ("background", "none")
     style.backgroundColor "none"
     style.custom ("border", "none") ]

@@ -18,7 +18,8 @@ let cardLayout pokemonType =
     style.padding 15
     style.backgroundImage
     <| getPokemonColor pokemonType
-    style.alignItems.center ]
+    style.alignItems.center
+    style.custom ("boxShadow", "2em 4em 6em -2em rgba(0,0,0,.5), 1em 2em 3.5em -2.5em rgba(0,0,0,.5)") ]
 
 let cardHero =
   [ style.width (length.percent 100)

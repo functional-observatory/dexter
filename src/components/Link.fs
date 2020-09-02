@@ -10,7 +10,7 @@ let link' =
   => fun (props: LinkProps) ->
        Html.a [ prop.style [ style.fontSize 24
                              style.textDecoration.none
-                             style.color "#fbfbfc"
+                             style.color "currentColor"
                              style.width (length.percent 70) ]
                 prop.text props.Text
                 prop.href props.Href ]

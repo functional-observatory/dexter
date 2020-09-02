@@ -1,7 +1,7 @@
 module MessageBroker
 
-open Fable.SimpleHttp
 open Elmish
+open Fable.SimpleHttp
 
 type RemotePokemon<'a> =
   | NotLoaded
