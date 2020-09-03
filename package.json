@@ -13,5 +13,8 @@
     "build": "dotnet fsi ./build.fsx build",
     "deploy": "netlify deploy --dir=build --prod",
     "deploy:dry": "netlify deploy --dir=build"
+  },
+  "dependencies": {
+    "react-popover": "^0.5.10"
   }
 }
