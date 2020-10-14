@@ -54,3 +54,4 @@ $ yarn deploy:dry
 ```
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9c9cdce5-9faa-40ea-82b6-a184c6c60ca0/deploy-status)](https://dex-fs.netlify.app)
+[![MIT](https://img.shields.io/badge/-MIT-black?style=flat-square)](https://github.com/rajatsharma/dexter/blob/master/LICENSE)
