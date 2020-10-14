@@ -13,14 +13,14 @@
 - Clone the repo.
 
 ```sh
-git clone https://github.com/rajatsharma/dexter
+$ git clone https://github.com/rajatsharma/dexter
 ```
 
 - Install dependencies.
 
 ```sh
-yarn
-dotnet paket update
+$ yarn
+$ dotnet paket update
 ```
 
 ## Development
@@ -28,7 +28,7 @@ dotnet paket update
 - Start development server with hot reload.
 
 ```sh
-yarn dev
+$ yarn dev
 ```
 
 - Open [http://localhost:4500/](http://localhost:4500/)
@@ -38,19 +38,19 @@ yarn dev
 - Create production build.
 
 ```sh
-yarn build
+$ yarn build
 ```
 
 - Dexter uses netlify-cli to deploy to [Netlify](https://www.netlify.com/).
 
 ```
-yarn deploy
+$ yarn deploy
 ```
 
 - You can also dry run deploys using 
 
 ```
-yarn deploy:dry
+$ yarn deploy:dry
 ```
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9c9cdce5-9faa-40ea-82b6-a184c6c60ca0/deploy-status)](https://dex-fs.netlify.app)
